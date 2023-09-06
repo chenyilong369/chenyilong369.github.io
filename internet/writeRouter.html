@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>利用react实现路由（简单） | jschen Blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="前端人,前端魂">
+    
+    <link rel="preload" href="/assets/css/0.styles.4dbd54c5.css" as="style"><link rel="preload" href="/assets/js/app.8164c333.js" as="script"><link rel="preload" href="/assets/js/2.1e096230.js" as="script"><link rel="preload" href="/assets/js/137.68deba66.js" as="script"><link rel="prefetch" href="/assets/js/10.c359f437.js"><link rel="prefetch" href="/assets/js/100.3ffb5af9.js"><link rel="prefetch" href="/assets/js/101.0cf6ef5a.js"><link rel="prefetch" href="/assets/js/102.3d4afa8d.js"><link rel="prefetch" href="/assets/js/103.666a5538.js"><link rel="prefetch" href="/assets/js/104.8e2ecb92.js"><link rel="prefetch" href="/assets/js/105.ff6fdb71.js"><link rel="prefetch" href="/assets/js/106.4ddf28e2.js"><link rel="prefetch" href="/assets/js/107.765a49ee.js"><link rel="prefetch" href="/assets/js/108.d5edade7.js"><link rel="prefetch" href="/assets/js/109.5b22fd04.js"><link rel="prefetch" href="/assets/js/11.0436f06a.js"><link rel="prefetch" href="/assets/js/110.074908b3.js"><link rel="prefetch" href="/assets/js/111.b58610d2.js"><link rel="prefetch" href="/assets/js/112.66bddf07.js"><link rel="prefetch" href="/assets/js/113.26a01b98.js"><link rel="prefetch" href="/assets/js/114.8e752817.js"><link rel="prefetch" href="/assets/js/115.0450106d.js"><link rel="prefetch" href="/assets/js/116.a02b39bd.js"><link rel="prefetch" href="/assets/js/117.b5a04b58.js"><link rel="prefetch" href="/assets/js/118.6bbdadd6.js"><link rel="prefetch" href="/assets/js/119.b7acf487.js"><link rel="prefetch" href="/assets/js/12.de94909e.js"><link rel="prefetch" href="/assets/js/120.f569e911.js"><link rel="prefetch" href="/assets/js/121.0a48ea11.js"><link rel="prefetch" href="/assets/js/122.ded21fa5.js"><link rel="prefetch" href="/assets/js/123.c7c5f83d.js"><link rel="prefetch" href="/assets/js/124.50497799.js"><link rel="prefetch" href="/assets/js/125.ef245240.js"><link rel="prefetch" href="/assets/js/126.7b7a856f.js"><link rel="prefetch" href="/assets/js/127.bbe9b338.js"><link rel="prefetch" href="/assets/js/128.aede8d7d.js"><link rel="prefetch" href="/assets/js/129.aa60dd84.js"><link rel="prefetch" href="/assets/js/13.e16f5c65.js"><link rel="prefetch" href="/assets/js/130.f8dd6e1f.js"><link rel="prefetch" href="/assets/js/131.0ba71fcf.js"><link rel="prefetch" href="/assets/js/132.02f8d611.js"><link rel="prefetch" href="/assets/js/133.434212fa.js"><link rel="prefetch" href="/assets/js/134.98d832d2.js"><link rel="prefetch" href="/assets/js/135.bd4c2713.js"><link rel="prefetch" href="/assets/js/136.c336f7c0.js"><link rel="prefetch" href="/assets/js/138.88701566.js"><link rel="prefetch" href="/assets/js/139.f445e345.js"><link rel="prefetch" href="/assets/js/14.4958d3b3.js"><link rel="prefetch" href="/assets/js/140.d3ec9384.js"><link rel="prefetch" href="/assets/js/141.e21c96b5.js"><link rel="prefetch" href="/assets/js/142.62cd1b7f.js"><link rel="prefetch" href="/assets/js/143.9e8236b9.js"><link rel="prefetch" href="/assets/js/144.a60d931b.js"><link rel="prefetch" href="/assets/js/145.c7b5d402.js"><link rel="prefetch" href="/assets/js/146.295a82b6.js"><link rel="prefetch" href="/assets/js/147.754f6f9c.js"><link rel="prefetch" href="/assets/js/148.acf204c8.js"><link rel="prefetch" href="/assets/js/149.e1c9fbd7.js"><link rel="prefetch" href="/assets/js/15.b6d51ccf.js"><link rel="prefetch" href="/assets/js/150.1f9415af.js"><link rel="prefetch" href="/assets/js/151.2cd0d1e6.js"><link rel="prefetch" href="/assets/js/152.0580c39e.js"><link rel="prefetch" href="/assets/js/153.414323fe.js"><link rel="prefetch" href="/assets/js/154.516157ae.js"><link rel="prefetch" href="/assets/js/155.36f72271.js"><link rel="prefetch" href="/assets/js/156.2fd8b83d.js"><link rel="prefetch" href="/assets/js/157.be52f124.js"><link rel="prefetch" href="/assets/js/158.5b2e53b2.js"><link rel="prefetch" href="/assets/js/159.06d24a79.js"><link rel="prefetch" href="/assets/js/16.b3042f0a.js"><link rel="prefetch" href="/assets/js/160.d9b2d17d.js"><link rel="prefetch" href="/assets/js/161.12ed3ef7.js"><link rel="prefetch" href="/assets/js/162.fd19cdaf.js"><link rel="prefetch" href="/assets/js/163.cb127248.js"><link rel="prefetch" href="/assets/js/164.a133957b.js"><link rel="prefetch" href="/assets/js/165.9cbcb225.js"><link rel="prefetch" href="/assets/js/166.ba787af4.js"><link rel="prefetch" href="/assets/js/167.addbc84c.js"><link rel="prefetch" href="/assets/js/168.ec88ab1a.js"><link rel="prefetch" href="/assets/js/17.0cec25c5.js"><link rel="prefetch" href="/assets/js/18.f6060c23.js"><link rel="prefetch" href="/assets/js/19.82dd5e0c.js"><link rel="prefetch" href="/assets/js/20.84737fdf.js"><link rel="prefetch" href="/assets/js/21.c23dac76.js"><link rel="prefetch" href="/assets/js/22.7e5196db.js"><link rel="prefetch" href="/assets/js/23.954f1ee4.js"><link rel="prefetch" href="/assets/js/24.28671f7c.js"><link rel="prefetch" href="/assets/js/25.67a8be99.js"><link rel="prefetch" href="/assets/js/26.dad53131.js"><link rel="prefetch" href="/assets/js/27.4d7388ba.js"><link rel="prefetch" href="/assets/js/28.98238882.js"><link rel="prefetch" href="/assets/js/29.8adce65a.js"><link rel="prefetch" href="/assets/js/3.ec369388.js"><link rel="prefetch" href="/assets/js/30.221e133f.js"><link rel="prefetch" href="/assets/js/31.a008da91.js"><link rel="prefetch" href="/assets/js/32.09ee84e1.js"><link rel="prefetch" href="/assets/js/33.485a20d9.js"><link rel="prefetch" href="/assets/js/34.2a22cb52.js"><link rel="prefetch" href="/assets/js/35.5dbeb360.js"><link rel="prefetch" href="/assets/js/36.8b0814f0.js"><link rel="prefetch" href="/assets/js/37.1859306c.js"><link rel="prefetch" href="/assets/js/38.62f392b7.js"><link rel="prefetch" href="/assets/js/39.285abf16.js"><link rel="prefetch" href="/assets/js/4.d812732b.js"><link rel="prefetch" href="/assets/js/40.af12b8a2.js"><link rel="prefetch" href="/assets/js/41.ba81ff4e.js"><link rel="prefetch" href="/assets/js/42.ff26b37e.js"><link rel="prefetch" href="/assets/js/43.e04e5b27.js"><link rel="prefetch" href="/assets/js/44.4dd69665.js"><link rel="prefetch" href="/assets/js/45.7246ea0f.js"><link rel="prefetch" href="/assets/js/46.0dacb2b7.js"><link rel="prefetch" href="/assets/js/47.be732a8c.js"><link rel="prefetch" href="/assets/js/48.d17af0de.js"><link rel="prefetch" href="/assets/js/49.967801d8.js"><link rel="prefetch" href="/assets/js/5.13ef6d2c.js"><link rel="prefetch" href="/assets/js/50.a5f1f868.js"><link rel="prefetch" href="/assets/js/51.8eaaf245.js"><link rel="prefetch" href="/assets/js/52.7f7f44e9.js"><link rel="prefetch" href="/assets/js/53.59f1ddbc.js"><link rel="prefetch" href="/assets/js/54.794ae8f9.js"><link rel="prefetch" href="/assets/js/55.4cee6aff.js"><link rel="prefetch" href="/assets/js/56.48afdbda.js"><link rel="prefetch" href="/assets/js/57.b64b4a3e.js"><link rel="prefetch" href="/assets/js/58.0bf2449e.js"><link rel="prefetch" href="/assets/js/59.a9f92505.js"><link rel="prefetch" href="/assets/js/6.d077a4f9.js"><link rel="prefetch" href="/assets/js/60.d92230e0.js"><link rel="prefetch" href="/assets/js/61.171cbb48.js"><link rel="prefetch" href="/assets/js/62.86f1a214.js"><link rel="prefetch" href="/assets/js/63.d89795ca.js"><link rel="prefetch" href="/assets/js/64.c5b4a68a.js"><link rel="prefetch" href="/assets/js/65.a406f90a.js"><link rel="prefetch" href="/assets/js/66.c8bcf7ba.js"><link rel="prefetch" href="/assets/js/67.d929202c.js"><link rel="prefetch" href="/assets/js/68.aa110260.js"><link rel="prefetch" href="/assets/js/69.38ff1ff6.js"><link rel="prefetch" href="/assets/js/7.2d058937.js"><link rel="prefetch" href="/assets/js/70.487b2291.js"><link rel="prefetch" href="/assets/js/71.00d41859.js"><link rel="prefetch" href="/assets/js/72.e46681c4.js"><link rel="prefetch" href="/assets/js/73.260eb048.js"><link rel="prefetch" href="/assets/js/74.9c4071f2.js"><link rel="prefetch" href="/assets/js/75.b5614d0e.js"><link rel="prefetch" href="/assets/js/76.cd1f7dbb.js"><link rel="prefetch" href="/assets/js/77.4e61868c.js"><link rel="prefetch" href="/assets/js/78.72e475b4.js"><link rel="prefetch" href="/assets/js/79.db9297bc.js"><link rel="prefetch" href="/assets/js/8.a4f15d2f.js"><link rel="prefetch" href="/assets/js/80.88216544.js"><link rel="prefetch" href="/assets/js/81.1988154a.js"><link rel="prefetch" href="/assets/js/82.c8b6bdff.js"><link rel="prefetch" href="/assets/js/83.365d1972.js"><link rel="prefetch" href="/assets/js/84.29983ff9.js"><link rel="prefetch" href="/assets/js/85.4f3567c9.js"><link rel="prefetch" href="/assets/js/86.88493b03.js"><link rel="prefetch" href="/assets/js/87.d18bb4d6.js"><link rel="prefetch" href="/assets/js/88.c7a0fdba.js"><link rel="prefetch" href="/assets/js/89.4292628d.js"><link rel="prefetch" href="/assets/js/9.d435d2db.js"><link rel="prefetch" href="/assets/js/90.60aebf49.js"><link rel="prefetch" href="/assets/js/91.32a0cd48.js"><link rel="prefetch" href="/assets/js/92.8bed3489.js"><link rel="prefetch" href="/assets/js/93.0610d26d.js"><link rel="prefetch" href="/assets/js/94.4776a036.js"><link rel="prefetch" href="/assets/js/95.ef302e18.js"><link rel="prefetch" href="/assets/js/96.1aff39cf.js"><link rel="prefetch" href="/assets/js/97.0edf171e.js"><link rel="prefetch" href="/assets/js/98.bd4b0373.js"><link rel="prefetch" href="/assets/js/99.7e249e57.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4dbd54c5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">jschen Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="webDesign" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="webDesign" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Babel/" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/TS/" class="nav-link">
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/internet/" class="nav-link router-link-active">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/technology/" class="nav-link">
+  技术杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/dataVisualization/" class="nav-link">
+  可视化
+</a></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/React/ReactBase/" class="nav-link">
+  React基础
+</a></li><li class="dropdown-subitem"><a href="/React/ReactExtend/" class="nav-link">
+  React扩展
+</a></li><li class="dropdown-subitem"><a href="/React/ReactApi/" class="nav-link">
+  React API
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Vue/VueBase/" class="nav-link">
+  Vue基础
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backend" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="backend" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/node/" class="nav-link">
+  node 基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="machineLearning" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="machineLearning" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/machineLearning/math/" class="nav-link">
+  数学基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interface" class="dropdown-title"><span class="title">面试</span> <span class="arrow down"></span></button> <button type="button" aria-label="interface" class="mobile-dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/interface/webDesignBase/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/interface/interfaceEnd/" class="nav-link">
+  面试经历
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="algorithm" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="algorithm" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/dp/" class="nav-link">
+  DP
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="leetcode" class="dropdown-title"><span class="title">leetcode</span> <span class="arrow down"></span></button> <button type="button" aria-label="leetcode" class="mobile-dropdown-title"><span class="title">leetcode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/leetcode/2021/" class="nav-link">
+  2021
+</a></li><li class="dropdown-item"><!----> <a href="/leetcode/2023/" class="nav-link">
+  2023
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/chenyilong369" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="webDesign" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="webDesign" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Babel/" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/TS/" class="nav-link">
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/internet/" class="nav-link router-link-active">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/technology/" class="nav-link">
+  技术杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/dataVisualization/" class="nav-link">
+  可视化
+</a></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/React/ReactBase/" class="nav-link">
+  React基础
+</a></li><li class="dropdown-subitem"><a href="/React/ReactExtend/" class="nav-link">
+  React扩展
+</a></li><li class="dropdown-subitem"><a href="/React/ReactApi/" class="nav-link">
+  React API
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Vue/VueBase/" class="nav-link">
+  Vue基础
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backend" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="backend" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/node/" class="nav-link">
+  node 基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="machineLearning" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="machineLearning" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/machineLearning/math/" class="nav-link">
+  数学基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interface" class="dropdown-title"><span class="title">面试</span> <span class="arrow down"></span></button> <button type="button" aria-label="interface" class="mobile-dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/interface/webDesignBase/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/interface/interfaceEnd/" class="nav-link">
+  面试经历
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="algorithm" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="algorithm" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/dp/" class="nav-link">
+  DP
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="leetcode" class="dropdown-title"><span class="title">leetcode</span> <span class="arrow down"></span></button> <button type="button" aria-label="leetcode" class="mobile-dropdown-title"><span class="title">leetcode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/leetcode/2021/" class="nav-link">
+  2021
+</a></li><li class="dropdown-item"><!----> <a href="/leetcode/2023/" class="nav-link">
+  2023
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/chenyilong369" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>浏览器</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/internet/cross.html" class="sidebar-link">跨域</a></li><li><a href="/internet/event.html" class="sidebar-link">事件循环</a></li><li><a href="/internet/task.html" class="sidebar-link">宏任务与微任务</a></li><li><a href="/internet/setTimeout.html" class="sidebar-link">setTimeout</a></li><li><a href="/internet/XMLHttpRequest.html" class="sidebar-link">XMLHttpRequest</a></li><li><a href="/internet/storage.html" class="sidebar-link">存储</a></li><li><a href="/internet/sameOrigin.html" class="sidebar-link">同源策略</a></li><li><a href="/internet/XSS.html" class="sidebar-link">跨站脚本攻击（XSS）</a></li><li><a href="/internet/CSRF.html" class="sidebar-link">CSRF 攻击</a></li><li><a href="/internet/navigation.html" class="sidebar-link">导航流程</a></li><li><a href="/internet/requestAnimationFrame.html" class="sidebar-link">requestAnimationFrame</a></li><li><a href="/internet/Ajax.html" class="sidebar-link">网络请求</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="利用react实现路由-简单"><a href="#利用react实现路由-简单" class="header-anchor">#</a> 利用react实现路由（简单）</h1> <p>在浏览器中有两种路由：</p> <ol><li>hash 路由：监听 url 中 hash 的变化，然后渲染不同的内容，这种路由不向服务器发送请求，不需要服务端的支持；</li> <li>history 路由：监听 url 中的路径变化，需要客户端和服务端共同的支持；</li></ol> <p>我们一步步实现这两种路由，来深入理解下底层的实现原理。我们主要实现以下几个简单的功能：</p> <ol><li>监听路由的变化，当路由发生变化时，可以作出动作；</li> <li>可以前进或者后退；</li> <li>可以配置路由；</li></ol> <h2 id="hash-路由"><a href="#hash-路由" class="header-anchor">#</a> hash 路由</h2> <p>在 react 中使用。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// hash.js</span>
+<span class="token keyword">class</span> <span class="token class-name">HashRouter</span> <span class="token punctuation">{</span>
+  currentUrl <span class="token operator">=</span> <span class="token string">''</span>
+  handlers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>refresh <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">refresh</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refresh<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'hashchange'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refresh<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">getHashPath</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> index <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'#'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>index <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> url<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token string">'/'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">refresh</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> curURL <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span> oldURL <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>newURL<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      oldURL <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHashPath</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>oldURL <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">)</span>
+      curURL <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHashPath</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>newURL <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      curURL <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHashPath</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>hash<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>currentUrl <span class="token operator">=</span> curURL
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> curURL<span class="token punctuation">,</span> oldURL<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">on</span><span class="token punctuation">(</span><span class="token parameter">eventName<span class="token punctuation">,</span> listener</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">[</span>eventName<span class="token punctuation">]</span> <span class="token operator">=</span> listener
+  <span class="token punctuation">}</span>
+
+  <span class="token function">emit</span><span class="token punctuation">(</span><span class="token parameter">eventName<span class="token punctuation">,</span> <span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">[</span>eventName<span class="token punctuation">]</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">handler</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> 
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> HashRouter
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// index.js</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span>
+<span class="token keyword">import</span> HashRouter <span class="token keyword">from</span> <span class="token string">'./hash'</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'App'</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'container'</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>我是标题<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>我是第一段话<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>我是第二段话<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Home</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token number">111</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">NotFound</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>NotFound<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token operator">&lt;</span>Home <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/app'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'App'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'*'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'404'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token operator">&lt;</span>NotFound <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+router<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">currentUrl<span class="token punctuation">,</span> lastUrl</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> route <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> routes<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> item <span class="token operator">=</span> routes<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>currentUrl <span class="token operator">===</span> item<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      route <span class="token operator">=</span> item
+      <span class="token keyword">break</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>route<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    route <span class="token operator">=</span> routes<span class="token punctuation">[</span>routes<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+  ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>component<span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>事件<code>hashchange</code>只会在 hash 发生变化时才能触发，而第一次进入到页面时并不会触发这个事件，因此我们还需要监听<code>load</code>事件。这里要注意的是，两个事件的 event 是不一样的：hashchange 事件中的 event 对象有 oldURL 和 newURL 两个属性，但 load 事件中的 event 没有这两个属性，不过我们可以通过 location.hash 来获取到当前的 hash 路由。</p> <h2 id="history"><a href="#history" class="header-anchor">#</a> history</h2> <p>在 history 路由中，我们会使用<code>window.history</code>中的方法，常见的操作有：</p> <ul><li>back()：后退到上一个路由；</li> <li>forward()：前进到下一个路由，如果有的话；</li> <li>go(number)：进入到任意一个路由，正数为前进，负数为后退；</li> <li>pushState(obj, title, url)：前进到指定的 URL，不刷新页面；</li> <li>replaceState(obj, title, url)：用 url 替换当前的路由，不刷新页面；</li></ul> <p>调用这几种方式时，都会只是修改了当前页面的 URL，页面的内容没有任何的变化。</p> <p>前 3 个方法只是路由历史记录的前进或者后退，无法跳转到指定的 URL；而<code>pushState</code>和<code>replaceState</code>可以跳转到指定的 URL。</p> <p>如果服务端没有新更新的 url 时，一刷新浏览器就会报错，因为刷新浏览器后，是真实地向服务器发送了一个 http 的网页请求。因此若要使用 history 路由，需要服务端的支持。</p> <p>pushState 和 replaceState 两个方法跟 location.href 和 location.replace 两个方法有什么区别呢？应用的场景有哪些呢？</p> <ol><li>location.href 和 location.replace 切换时要向服务器发送请求，而 pushState 和 replace 仅修改 url，除非主动发起请求；</li> <li>仅切换 url 而不发送请求的特性，可以在前端渲染中使用，例如首页是服务端渲染，二级页面采用前端渲染；</li> <li>可以添加路由切换的动画；</li> <li>在浏览器中使用类似抖音的这种场景时，用户滑动切换视频时，可以静默修改对应的 URL，当用户刷新页面时，还能停留在当前视频。</li></ol> <p>当我们用 history 的路由时，必然要能监听到路由的变化才行。全局有个<code>popstate</code>事件，但<code>pushState</code>和<code>replaceState</code>被调用时，是不会触发触发 popstate 事件的，只有上面列举的前 3 个方法会触发。</p> <p>针对这种情况，我们可以使用<code>window.dispatchEvent</code>添加事件：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">HistoryRouter</span> <span class="token punctuation">{</span>
+  currentUrl <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  handlers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>refresh <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">refresh</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addStateListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refresh<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'popstate'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refresh<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'pushState'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refresh<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'replaceState'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>refresh<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">addStateListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token function-variable function">listener</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">var</span> orig <span class="token operator">=</span> history<span class="token punctuation">[</span>type<span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">var</span> rv <span class="token operator">=</span> <span class="token function">orig</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">var</span> e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Event</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              e<span class="token punctuation">.</span>arguments <span class="token operator">=</span> arguments<span class="token punctuation">;</span>
+              window<span class="token punctuation">.</span><span class="token function">dispatchEvent</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span> rv<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      window<span class="token punctuation">.</span>history<span class="token punctuation">.</span>pushState <span class="token operator">=</span> <span class="token function">listener</span><span class="token punctuation">(</span><span class="token string">'pushState'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      window<span class="token punctuation">.</span>history<span class="token punctuation">.</span>replaceState <span class="token operator">=</span> <span class="token function">listener</span><span class="token punctuation">(</span><span class="token string">'replaceState'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">refresh</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>currentUrl <span class="token operator">=</span> location<span class="token punctuation">.</span>pathname<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> location<span class="token punctuation">.</span>pathname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#app span'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> location<span class="token punctuation">.</span>pathname<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">on</span><span class="token punctuation">(</span><span class="token parameter">evName<span class="token punctuation">,</span> listener</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">[</span>evName<span class="token punctuation">]</span> <span class="token operator">=</span> listener<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">emit</span><span class="token punctuation">(</span><span class="token parameter">evName<span class="token punctuation">,</span> <span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handlers<span class="token punctuation">[</span>evName<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">handler</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HistoryRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+router<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'change'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">curUrl</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>curUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/27/2021, 4:44:05 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8164c333.js" defer></script><script src="/assets/js/2.1e096230.js" defer></script><script src="/assets/js/137.68deba66.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React-Hooks | jschen Blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="前端人,前端魂">
+    
+    <link rel="preload" href="/assets/css/0.styles.4dbd54c5.css" as="style"><link rel="preload" href="/assets/js/app.8164c333.js" as="script"><link rel="preload" href="/assets/js/2.1e096230.js" as="script"><link rel="preload" href="/assets/js/69.38ff1ff6.js" as="script"><link rel="prefetch" href="/assets/js/10.c359f437.js"><link rel="prefetch" href="/assets/js/100.3ffb5af9.js"><link rel="prefetch" href="/assets/js/101.0cf6ef5a.js"><link rel="prefetch" href="/assets/js/102.3d4afa8d.js"><link rel="prefetch" href="/assets/js/103.666a5538.js"><link rel="prefetch" href="/assets/js/104.8e2ecb92.js"><link rel="prefetch" href="/assets/js/105.ff6fdb71.js"><link rel="prefetch" href="/assets/js/106.4ddf28e2.js"><link rel="prefetch" href="/assets/js/107.765a49ee.js"><link rel="prefetch" href="/assets/js/108.d5edade7.js"><link rel="prefetch" href="/assets/js/109.5b22fd04.js"><link rel="prefetch" href="/assets/js/11.0436f06a.js"><link rel="prefetch" href="/assets/js/110.074908b3.js"><link rel="prefetch" href="/assets/js/111.b58610d2.js"><link rel="prefetch" href="/assets/js/112.66bddf07.js"><link rel="prefetch" href="/assets/js/113.26a01b98.js"><link rel="prefetch" href="/assets/js/114.8e752817.js"><link rel="prefetch" href="/assets/js/115.0450106d.js"><link rel="prefetch" href="/assets/js/116.a02b39bd.js"><link rel="prefetch" href="/assets/js/117.b5a04b58.js"><link rel="prefetch" href="/assets/js/118.6bbdadd6.js"><link rel="prefetch" href="/assets/js/119.b7acf487.js"><link rel="prefetch" href="/assets/js/12.de94909e.js"><link rel="prefetch" href="/assets/js/120.f569e911.js"><link rel="prefetch" href="/assets/js/121.0a48ea11.js"><link rel="prefetch" href="/assets/js/122.ded21fa5.js"><link rel="prefetch" href="/assets/js/123.c7c5f83d.js"><link rel="prefetch" href="/assets/js/124.50497799.js"><link rel="prefetch" href="/assets/js/125.ef245240.js"><link rel="prefetch" href="/assets/js/126.7b7a856f.js"><link rel="prefetch" href="/assets/js/127.bbe9b338.js"><link rel="prefetch" href="/assets/js/128.aede8d7d.js"><link rel="prefetch" href="/assets/js/129.aa60dd84.js"><link rel="prefetch" href="/assets/js/13.e16f5c65.js"><link rel="prefetch" href="/assets/js/130.f8dd6e1f.js"><link rel="prefetch" href="/assets/js/131.0ba71fcf.js"><link rel="prefetch" href="/assets/js/132.02f8d611.js"><link rel="prefetch" href="/assets/js/133.434212fa.js"><link rel="prefetch" href="/assets/js/134.98d832d2.js"><link rel="prefetch" href="/assets/js/135.bd4c2713.js"><link rel="prefetch" href="/assets/js/136.c336f7c0.js"><link rel="prefetch" href="/assets/js/137.68deba66.js"><link rel="prefetch" href="/assets/js/138.88701566.js"><link rel="prefetch" href="/assets/js/139.f445e345.js"><link rel="prefetch" href="/assets/js/14.4958d3b3.js"><link rel="prefetch" href="/assets/js/140.d3ec9384.js"><link rel="prefetch" href="/assets/js/141.e21c96b5.js"><link rel="prefetch" href="/assets/js/142.62cd1b7f.js"><link rel="prefetch" href="/assets/js/143.9e8236b9.js"><link rel="prefetch" href="/assets/js/144.a60d931b.js"><link rel="prefetch" href="/assets/js/145.c7b5d402.js"><link rel="prefetch" href="/assets/js/146.295a82b6.js"><link rel="prefetch" href="/assets/js/147.754f6f9c.js"><link rel="prefetch" href="/assets/js/148.acf204c8.js"><link rel="prefetch" href="/assets/js/149.e1c9fbd7.js"><link rel="prefetch" href="/assets/js/15.b6d51ccf.js"><link rel="prefetch" href="/assets/js/150.1f9415af.js"><link rel="prefetch" href="/assets/js/151.2cd0d1e6.js"><link rel="prefetch" href="/assets/js/152.0580c39e.js"><link rel="prefetch" href="/assets/js/153.414323fe.js"><link rel="prefetch" href="/assets/js/154.516157ae.js"><link rel="prefetch" href="/assets/js/155.36f72271.js"><link rel="prefetch" href="/assets/js/156.2fd8b83d.js"><link rel="prefetch" href="/assets/js/157.be52f124.js"><link rel="prefetch" href="/assets/js/158.5b2e53b2.js"><link rel="prefetch" href="/assets/js/159.06d24a79.js"><link rel="prefetch" href="/assets/js/16.b3042f0a.js"><link rel="prefetch" href="/assets/js/160.d9b2d17d.js"><link rel="prefetch" href="/assets/js/161.12ed3ef7.js"><link rel="prefetch" href="/assets/js/162.fd19cdaf.js"><link rel="prefetch" href="/assets/js/163.cb127248.js"><link rel="prefetch" href="/assets/js/164.a133957b.js"><link rel="prefetch" href="/assets/js/165.9cbcb225.js"><link rel="prefetch" href="/assets/js/166.ba787af4.js"><link rel="prefetch" href="/assets/js/167.addbc84c.js"><link rel="prefetch" href="/assets/js/168.ec88ab1a.js"><link rel="prefetch" href="/assets/js/17.0cec25c5.js"><link rel="prefetch" href="/assets/js/18.f6060c23.js"><link rel="prefetch" href="/assets/js/19.82dd5e0c.js"><link rel="prefetch" href="/assets/js/20.84737fdf.js"><link rel="prefetch" href="/assets/js/21.c23dac76.js"><link rel="prefetch" href="/assets/js/22.7e5196db.js"><link rel="prefetch" href="/assets/js/23.954f1ee4.js"><link rel="prefetch" href="/assets/js/24.28671f7c.js"><link rel="prefetch" href="/assets/js/25.67a8be99.js"><link rel="prefetch" href="/assets/js/26.dad53131.js"><link rel="prefetch" href="/assets/js/27.4d7388ba.js"><link rel="prefetch" href="/assets/js/28.98238882.js"><link rel="prefetch" href="/assets/js/29.8adce65a.js"><link rel="prefetch" href="/assets/js/3.ec369388.js"><link rel="prefetch" href="/assets/js/30.221e133f.js"><link rel="prefetch" href="/assets/js/31.a008da91.js"><link rel="prefetch" href="/assets/js/32.09ee84e1.js"><link rel="prefetch" href="/assets/js/33.485a20d9.js"><link rel="prefetch" href="/assets/js/34.2a22cb52.js"><link rel="prefetch" href="/assets/js/35.5dbeb360.js"><link rel="prefetch" href="/assets/js/36.8b0814f0.js"><link rel="prefetch" href="/assets/js/37.1859306c.js"><link rel="prefetch" href="/assets/js/38.62f392b7.js"><link rel="prefetch" href="/assets/js/39.285abf16.js"><link rel="prefetch" href="/assets/js/4.d812732b.js"><link rel="prefetch" href="/assets/js/40.af12b8a2.js"><link rel="prefetch" href="/assets/js/41.ba81ff4e.js"><link rel="prefetch" href="/assets/js/42.ff26b37e.js"><link rel="prefetch" href="/assets/js/43.e04e5b27.js"><link rel="prefetch" href="/assets/js/44.4dd69665.js"><link rel="prefetch" href="/assets/js/45.7246ea0f.js"><link rel="prefetch" href="/assets/js/46.0dacb2b7.js"><link rel="prefetch" href="/assets/js/47.be732a8c.js"><link rel="prefetch" href="/assets/js/48.d17af0de.js"><link rel="prefetch" href="/assets/js/49.967801d8.js"><link rel="prefetch" href="/assets/js/5.13ef6d2c.js"><link rel="prefetch" href="/assets/js/50.a5f1f868.js"><link rel="prefetch" href="/assets/js/51.8eaaf245.js"><link rel="prefetch" href="/assets/js/52.7f7f44e9.js"><link rel="prefetch" href="/assets/js/53.59f1ddbc.js"><link rel="prefetch" href="/assets/js/54.794ae8f9.js"><link rel="prefetch" href="/assets/js/55.4cee6aff.js"><link rel="prefetch" href="/assets/js/56.48afdbda.js"><link rel="prefetch" href="/assets/js/57.b64b4a3e.js"><link rel="prefetch" href="/assets/js/58.0bf2449e.js"><link rel="prefetch" href="/assets/js/59.a9f92505.js"><link rel="prefetch" href="/assets/js/6.d077a4f9.js"><link rel="prefetch" href="/assets/js/60.d92230e0.js"><link rel="prefetch" href="/assets/js/61.171cbb48.js"><link rel="prefetch" href="/assets/js/62.86f1a214.js"><link rel="prefetch" href="/assets/js/63.d89795ca.js"><link rel="prefetch" href="/assets/js/64.c5b4a68a.js"><link rel="prefetch" href="/assets/js/65.a406f90a.js"><link rel="prefetch" href="/assets/js/66.c8bcf7ba.js"><link rel="prefetch" href="/assets/js/67.d929202c.js"><link rel="prefetch" href="/assets/js/68.aa110260.js"><link rel="prefetch" href="/assets/js/7.2d058937.js"><link rel="prefetch" href="/assets/js/70.487b2291.js"><link rel="prefetch" href="/assets/js/71.00d41859.js"><link rel="prefetch" href="/assets/js/72.e46681c4.js"><link rel="prefetch" href="/assets/js/73.260eb048.js"><link rel="prefetch" href="/assets/js/74.9c4071f2.js"><link rel="prefetch" href="/assets/js/75.b5614d0e.js"><link rel="prefetch" href="/assets/js/76.cd1f7dbb.js"><link rel="prefetch" href="/assets/js/77.4e61868c.js"><link rel="prefetch" href="/assets/js/78.72e475b4.js"><link rel="prefetch" href="/assets/js/79.db9297bc.js"><link rel="prefetch" href="/assets/js/8.a4f15d2f.js"><link rel="prefetch" href="/assets/js/80.88216544.js"><link rel="prefetch" href="/assets/js/81.1988154a.js"><link rel="prefetch" href="/assets/js/82.c8b6bdff.js"><link rel="prefetch" href="/assets/js/83.365d1972.js"><link rel="prefetch" href="/assets/js/84.29983ff9.js"><link rel="prefetch" href="/assets/js/85.4f3567c9.js"><link rel="prefetch" href="/assets/js/86.88493b03.js"><link rel="prefetch" href="/assets/js/87.d18bb4d6.js"><link rel="prefetch" href="/assets/js/88.c7a0fdba.js"><link rel="prefetch" href="/assets/js/89.4292628d.js"><link rel="prefetch" href="/assets/js/9.d435d2db.js"><link rel="prefetch" href="/assets/js/90.60aebf49.js"><link rel="prefetch" href="/assets/js/91.32a0cd48.js"><link rel="prefetch" href="/assets/js/92.8bed3489.js"><link rel="prefetch" href="/assets/js/93.0610d26d.js"><link rel="prefetch" href="/assets/js/94.4776a036.js"><link rel="prefetch" href="/assets/js/95.ef302e18.js"><link rel="prefetch" href="/assets/js/96.1aff39cf.js"><link rel="prefetch" href="/assets/js/97.0edf171e.js"><link rel="prefetch" href="/assets/js/98.bd4b0373.js"><link rel="prefetch" href="/assets/js/99.7e249e57.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4dbd54c5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">jschen Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="webDesign" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="webDesign" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Babel/" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/TS/" class="nav-link">
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/internet/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/technology/" class="nav-link">
+  技术杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/dataVisualization/" class="nav-link">
+  可视化
+</a></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/React/ReactBase/" class="nav-link router-link-active">
+  React基础
+</a></li><li class="dropdown-subitem"><a href="/React/ReactExtend/" class="nav-link">
+  React扩展
+</a></li><li class="dropdown-subitem"><a href="/React/ReactApi/" class="nav-link">
+  React API
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Vue/VueBase/" class="nav-link">
+  Vue基础
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backend" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="backend" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/node/" class="nav-link">
+  node 基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="machineLearning" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="machineLearning" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/machineLearning/math/" class="nav-link">
+  数学基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interface" class="dropdown-title"><span class="title">面试</span> <span class="arrow down"></span></button> <button type="button" aria-label="interface" class="mobile-dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/interface/webDesignBase/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/interface/interfaceEnd/" class="nav-link">
+  面试经历
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="algorithm" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="algorithm" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/dp/" class="nav-link">
+  DP
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="leetcode" class="dropdown-title"><span class="title">leetcode</span> <span class="arrow down"></span></button> <button type="button" aria-label="leetcode" class="mobile-dropdown-title"><span class="title">leetcode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/leetcode/2021/" class="nav-link">
+  2021
+</a></li><li class="dropdown-item"><!----> <a href="/leetcode/2023/" class="nav-link">
+  2023
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/chenyilong369" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="webDesign" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="webDesign" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Babel/" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/TS/" class="nav-link">
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/internet/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/technology/" class="nav-link">
+  技术杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/dataVisualization/" class="nav-link">
+  可视化
+</a></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/React/ReactBase/" class="nav-link router-link-active">
+  React基础
+</a></li><li class="dropdown-subitem"><a href="/React/ReactExtend/" class="nav-link">
+  React扩展
+</a></li><li class="dropdown-subitem"><a href="/React/ReactApi/" class="nav-link">
+  React API
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Vue/VueBase/" class="nav-link">
+  Vue基础
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backend" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="backend" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/node/" class="nav-link">
+  node 基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="machineLearning" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="machineLearning" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/machineLearning/math/" class="nav-link">
+  数学基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interface" class="dropdown-title"><span class="title">面试</span> <span class="arrow down"></span></button> <button type="button" aria-label="interface" class="mobile-dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/interface/webDesignBase/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/interface/interfaceEnd/" class="nav-link">
+  面试经历
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="algorithm" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="algorithm" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/dp/" class="nav-link">
+  DP
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="leetcode" class="dropdown-title"><span class="title">leetcode</span> <span class="arrow down"></span></button> <button type="button" aria-label="leetcode" class="mobile-dropdown-title"><span class="title">leetcode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/leetcode/2021/" class="nav-link">
+  2021
+</a></li><li class="dropdown-item"><!----> <a href="/leetcode/2023/" class="nav-link">
+  2023
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/chenyilong369" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>React 基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/React/ReactBase/JSX.html" class="sidebar-link">jsx简介</a></li><li><a href="/React/ReactBase/itemRender.html" class="sidebar-link">元素渲染</a></li><li><a href="/React/ReactBase/props.html" class="sidebar-link">组件和 Props</a></li><li><a href="/React/ReactBase/queue.html" class="sidebar-link">生命周期方法</a></li><li><a href="/React/ReactBase/hooks.html" aria-current="page" class="active sidebar-link">React-Hooks</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/React/ReactBase/hooks.html#核心-api" class="sidebar-link">核心 API</a></li><li class="sidebar-sub-header"><a href="/React/ReactBase/hooks.html#为什么需要-react-hooks" class="sidebar-link">为什么需要 React-Hooks</a></li><li class="sidebar-sub-header"><a href="/React/ReactBase/hooks.html#hooks-底层实现" class="sidebar-link">Hooks 底层实现</a></li></ul></li><li><a href="/React/ReactBase/VirtualDOM.html" class="sidebar-link">虚拟 DOM</a></li><li><a href="/React/ReactBase/stack.html" class="sidebar-link">栈调和</a></li><li><a href="/React/ReactBase/setState.html" class="sidebar-link">setState</a></li><li><a href="/React/ReactBase/Fiber.html" class="sidebar-link">Fiber 架构</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react-hooks"><a href="#react-hooks" class="header-anchor">#</a> React-Hooks</h1> <h2 id="核心-api"><a href="#核心-api" class="header-anchor">#</a> 核心 API</h2> <h3 id="usestate-为函数组件引入状态"><a href="#usestate-为函数组件引入状态" class="header-anchor">#</a> useState()：为函数组件引入状态</h3> <p>早期的函数组件相比于类组件，其一大劣势是缺乏定义和维护 state 的能力，而 state（状态）作为 React 组件的灵魂，必然是不可省略的。</p> <p>下面有个 Demo 来帮助理解：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Button</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>text<span class="token punctuation">,</span> setText<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">&quot;初始文本&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">changeText</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">&quot;修改后的文本&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;textButton&quot;</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span>text<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>changeText<span class="token punctuation">}</span><span class="token operator">&gt;</span>点击修改文本<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>从用法上看，<code>useState</code> 返回的是一个数组，数组的第一个元素对应的是我们想要的那个 state 变量，第二个元素对应的是能够修改这个变量的 API。</p> <p>当我们在函数组件中调用 <code>React.useState</code> 的时候，实际上是给这个组件关联了一个状态，它就像类组件中 state 对象的某一个属性一样，对应着一个单独的状态，允许你存储任意类型的值。</p> <h3 id="useeffect-允许函数组件执行副作用操作"><a href="#useeffect-允许函数组件执行副作用操作" class="header-anchor">#</a> useEffect()：允许函数组件执行副作用操作</h3> <p><code>useEffect</code> 能够为函数组件引入副作用。过去我们习惯放在 <code>componentDidMount</code>、<code>componentDidUpdate</code> 和 <code>componentWillUnmount</code> 三个生命周期里来做的事，现在可以放在 <code>useEffect</code> 里来做，比如操作 DOM、订阅事件、调用外部 API 获取数据等。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 注意 hook 在使用之前需要引入</span>
+<span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token comment">// 定义函数组件</span>
+<span class="token keyword">function</span> <span class="token function">IncreasingTodoList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 创建 count 状态及其对应的状态修改函数</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 此处的定位与 componentDidMount 和 componentDidUpdate 相似</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 每次 count 增加时，都增加对应的待办项</span>
+    <span class="token keyword">const</span> todoList <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;todoList&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> newItem <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;li&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    newItem<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">我是第</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">个待办项</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    todoList<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>newItem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 编写 UI 逻辑</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>当前共计 <span class="token punctuation">{</span>count<span class="token punctuation">}</span> 个todo Item<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>ul id<span class="token operator">=</span><span class="token string">&quot;todoList&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>点我增加一个待办项<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>useEffect</code> 可以接收两个参数，分别是回调函数与依赖数组。</p> <p>下面介绍一下 <code>useEffect</code> 的调用规则。</p> <ul><li>每一次渲染后都执行的副作用：传入回调函数，不传依赖数组。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">useEffect</span><span class="token punctuation">(</span>callBack<span class="token punctuation">)</span>
+</code></pre></div><ul><li>仅在挂载阶段执行一次的副作用：传入回调函数，<strong>且这个函数的返回值不是一个函</strong>数，同时传入一个空数组。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token comment">// 这里是业务逻辑 </span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>仅在挂载阶段和卸载阶段执行的副作用：传入回调函数，<strong>且这个函数的返回值是一个函数</strong>，同时传入一个空数组。假如回调函数本身记为 A， 返回的函数记为 B，那么将在挂载阶段执行 A，卸载阶段执行 B。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token comment">// 这里是 A 的业务逻辑</span>
+
+  <span class="token comment">// 返回一个函数记为 B</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>useEffect 回调中返回的函数被称为“清除函数”</strong>，当 React 识别到清除函数时，会在卸载时执行清除函数内部的逻辑。<strong>这个规律不会受第二个参数或者其他因素的影响，只要你在 useEffect 回调中返回了一个函数，它就会被作为清除函数来处理</strong>。</p> <ul><li>每一次渲染都触发，且卸载阶段也会被触发的副作用：传入回调函数，且这个函数的返回值是一个函数，同时不传第二个参数。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token comment">// 这里是 A 的业务逻辑</span>
+
+  <span class="token comment">// 返回一个函数记为 B</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>根据一定的依赖条件来触发的副作用：传入回调函数（若返回值是一个函数，仍然仅影响卸载阶段对副作用的处理，此处不再赘述），同时传入一个非空的数组.</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token comment">// 这是回调函数的业务逻辑 </span>
+
+  <span class="token comment">// 若 xxx 是一个函数，则 xxx 会在组件卸载时被触发</span>
+  <span class="token keyword">return</span> xxx
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">,</span> num3<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="为什么需要-react-hooks"><a href="#为什么需要-react-hooks" class="header-anchor">#</a> 为什么需要 React-Hooks</h2> <ul><li>告别难以理解的 Class；</li> <li>解决业务逻辑难以拆分的问题；</li> <li>使状态逻辑复用变得简单可行；</li> <li>函数组件从设计思想上来看，更加契合 React 的理念。</li></ul> <p>React 团队面向开发者给出了两条 React-Hooks 的使用原则，原则的内容如下：</p> <ol><li>只在 React 函数中调用 Hook；</li> <li>不要在循环、条件或嵌套函数中调用 Hook。</li></ol> <h2 id="hooks-底层实现"><a href="#hooks-底层实现" class="header-anchor">#</a> Hooks 底层实现</h2> <p>React-Hooks 的调用链路在首次渲染和更新阶段是不同的。</p> <p>我们首先看一下首次渲染阶段。</p> <img src="/react/hooks01.png" alt="hooks01"> <p><code>useState</code> 触发的一系列操作最后会落到 <code>mountState</code> 里面去，所以我们重点需要关注的就是 mountState 做了什么事情。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 进入 mounState 逻辑</span>
+<span class="token keyword">function</span> <span class="token function">mountState</span><span class="token punctuation">(</span><span class="token parameter">initialState</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// 将新的 hook 对象追加进链表尾部</span>
+  <span class="token keyword">var</span> hook <span class="token operator">=</span> <span class="token function">mountWorkInProgressHook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// initialState 可以是一个回调，若是回调，则取回调执行后的值</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> initialState <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// $FlowFixMe: Flow doesn't like mixed types</span>
+    initialState <span class="token operator">=</span> <span class="token function">initialState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 创建当前 hook 对象的更新队列，这一步主要是为了能够依序保留 dispatch</span>
+  <span class="token keyword">const</span> queue <span class="token operator">=</span> hook<span class="token punctuation">.</span>queue <span class="token operator">=</span> <span class="token punctuation">{</span>
+    last<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    dispatch<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    lastRenderedReducer<span class="token operator">:</span> basicStateReducer<span class="token punctuation">,</span>
+    lastRenderedState<span class="token operator">:</span> <span class="token punctuation">(</span>initialState<span class="token operator">:</span> any<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 将 initialState 作为一个“记忆值”存下来</span>
+  hook<span class="token punctuation">.</span>memoizedState <span class="token operator">=</span> hook<span class="token punctuation">.</span>baseState <span class="token operator">=</span> initialState<span class="token punctuation">;</span>
+
+  <span class="token comment">// dispatch 是由上下文中一个叫 dispatchAction 的方法创建的，这里不必纠结这个方法具体做了什么</span>
+  <span class="token keyword">var</span> dispatch <span class="token operator">=</span> queue<span class="token punctuation">.</span>dispatch <span class="token operator">=</span> <span class="token function">dispatchAction</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> currentlyRenderingFiber$<span class="token number">1</span><span class="token punctuation">,</span> queue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 返回目标数组，dispatch 其实就是示例中常常见到的 setXXX 这个函数，想不到吧？哈哈</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>hook<span class="token punctuation">.</span>memoizedState<span class="token punctuation">,</span> dispatch<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>可以看出<strong>mounState 的主要工作是初始化 Hooks</strong>。</p> <p>下面我们看看 mountWorkInProgressHook 方法</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">mountWorkInProgressHook</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 注意，单个 hook 是以对象的形式存在的</span>
+  <span class="token keyword">var</span> hook <span class="token operator">=</span> <span class="token punctuation">{</span>
+    memoizedState<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    baseState<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    baseQueue<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    queue<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    next<span class="token operator">:</span> <span class="token keyword">null</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>workInProgressHook <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 这行代码每个 React 版本不太一样，但做的都是同一件事：将 hook 作为链表的头节点处理</span>
+    firstWorkInProgressHook <span class="token operator">=</span> workInProgressHook <span class="token operator">=</span> hook<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 若链表不为空，则将 hook 追加到链表尾部</span>
+    workInProgressHook <span class="token operator">=</span> workInProgressHook<span class="token punctuation">.</span>next <span class="token operator">=</span> hook<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 返回当前的 hook</span>
+  <span class="token keyword">return</span> workInProgressHook<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>hook 相关的所有信息收敛在一个 hook 对象里，而 hook 对象之间以单向链表的形式相互串联</strong>。</p> <p>接着再看更新阶段大致的流程图：</p> <img src="/react/hooks02.png" alt="hooks02"> <p><code>updateState</code> 之后的操作链路，虽然涉及的代码有很多，但其实做的事情很容易理解：<strong>按顺序去遍历之前构建好的链表，取出对应的数据信息进行渲染</strong>。</p> <p><strong>hooks 的渲染是通过“依次遍历”来定位每个 hooks 内容的。如果前后两次读到的链表在顺序上出现差异，那么渲染的结果自然是不可控的</strong>。也会是说<strong>Hooks 的本质其实是链表</strong>。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/23/2021, 9:04:54 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/React/ReactBase/queue.html" class="prev">
+        生命周期方法
+      </a></span> <span class="next"><a href="/React/ReactBase/VirtualDOM.html">
+        虚拟 DOM
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8164c333.js" defer></script><script src="/assets/js/2.1e096230.js" defer></script><script src="/assets/js/69.38ff1ff6.js" defer></script>
+  </body>
+</html>

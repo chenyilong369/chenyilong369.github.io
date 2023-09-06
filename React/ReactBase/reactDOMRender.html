@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ReactDOM.render 串联渲染链路 | jschen Blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="前端人,前端魂">
+    
+    <link rel="preload" href="/assets/css/0.styles.4dbd54c5.css" as="style"><link rel="preload" href="/assets/js/app.8164c333.js" as="script"><link rel="preload" href="/assets/js/2.1e096230.js" as="script"><link rel="preload" href="/assets/js/73.260eb048.js" as="script"><link rel="prefetch" href="/assets/js/10.c359f437.js"><link rel="prefetch" href="/assets/js/100.3ffb5af9.js"><link rel="prefetch" href="/assets/js/101.0cf6ef5a.js"><link rel="prefetch" href="/assets/js/102.3d4afa8d.js"><link rel="prefetch" href="/assets/js/103.666a5538.js"><link rel="prefetch" href="/assets/js/104.8e2ecb92.js"><link rel="prefetch" href="/assets/js/105.ff6fdb71.js"><link rel="prefetch" href="/assets/js/106.4ddf28e2.js"><link rel="prefetch" href="/assets/js/107.765a49ee.js"><link rel="prefetch" href="/assets/js/108.d5edade7.js"><link rel="prefetch" href="/assets/js/109.5b22fd04.js"><link rel="prefetch" href="/assets/js/11.0436f06a.js"><link rel="prefetch" href="/assets/js/110.074908b3.js"><link rel="prefetch" href="/assets/js/111.b58610d2.js"><link rel="prefetch" href="/assets/js/112.66bddf07.js"><link rel="prefetch" href="/assets/js/113.26a01b98.js"><link rel="prefetch" href="/assets/js/114.8e752817.js"><link rel="prefetch" href="/assets/js/115.0450106d.js"><link rel="prefetch" href="/assets/js/116.a02b39bd.js"><link rel="prefetch" href="/assets/js/117.b5a04b58.js"><link rel="prefetch" href="/assets/js/118.6bbdadd6.js"><link rel="prefetch" href="/assets/js/119.b7acf487.js"><link rel="prefetch" href="/assets/js/12.de94909e.js"><link rel="prefetch" href="/assets/js/120.f569e911.js"><link rel="prefetch" href="/assets/js/121.0a48ea11.js"><link rel="prefetch" href="/assets/js/122.ded21fa5.js"><link rel="prefetch" href="/assets/js/123.c7c5f83d.js"><link rel="prefetch" href="/assets/js/124.50497799.js"><link rel="prefetch" href="/assets/js/125.ef245240.js"><link rel="prefetch" href="/assets/js/126.7b7a856f.js"><link rel="prefetch" href="/assets/js/127.bbe9b338.js"><link rel="prefetch" href="/assets/js/128.aede8d7d.js"><link rel="prefetch" href="/assets/js/129.aa60dd84.js"><link rel="prefetch" href="/assets/js/13.e16f5c65.js"><link rel="prefetch" href="/assets/js/130.f8dd6e1f.js"><link rel="prefetch" href="/assets/js/131.0ba71fcf.js"><link rel="prefetch" href="/assets/js/132.02f8d611.js"><link rel="prefetch" href="/assets/js/133.434212fa.js"><link rel="prefetch" href="/assets/js/134.98d832d2.js"><link rel="prefetch" href="/assets/js/135.bd4c2713.js"><link rel="prefetch" href="/assets/js/136.c336f7c0.js"><link rel="prefetch" href="/assets/js/137.68deba66.js"><link rel="prefetch" href="/assets/js/138.88701566.js"><link rel="prefetch" href="/assets/js/139.f445e345.js"><link rel="prefetch" href="/assets/js/14.4958d3b3.js"><link rel="prefetch" href="/assets/js/140.d3ec9384.js"><link rel="prefetch" href="/assets/js/141.e21c96b5.js"><link rel="prefetch" href="/assets/js/142.62cd1b7f.js"><link rel="prefetch" href="/assets/js/143.9e8236b9.js"><link rel="prefetch" href="/assets/js/144.a60d931b.js"><link rel="prefetch" href="/assets/js/145.c7b5d402.js"><link rel="prefetch" href="/assets/js/146.295a82b6.js"><link rel="prefetch" href="/assets/js/147.754f6f9c.js"><link rel="prefetch" href="/assets/js/148.acf204c8.js"><link rel="prefetch" href="/assets/js/149.e1c9fbd7.js"><link rel="prefetch" href="/assets/js/15.b6d51ccf.js"><link rel="prefetch" href="/assets/js/150.1f9415af.js"><link rel="prefetch" href="/assets/js/151.2cd0d1e6.js"><link rel="prefetch" href="/assets/js/152.0580c39e.js"><link rel="prefetch" href="/assets/js/153.414323fe.js"><link rel="prefetch" href="/assets/js/154.516157ae.js"><link rel="prefetch" href="/assets/js/155.36f72271.js"><link rel="prefetch" href="/assets/js/156.2fd8b83d.js"><link rel="prefetch" href="/assets/js/157.be52f124.js"><link rel="prefetch" href="/assets/js/158.5b2e53b2.js"><link rel="prefetch" href="/assets/js/159.06d24a79.js"><link rel="prefetch" href="/assets/js/16.b3042f0a.js"><link rel="prefetch" href="/assets/js/160.d9b2d17d.js"><link rel="prefetch" href="/assets/js/161.12ed3ef7.js"><link rel="prefetch" href="/assets/js/162.fd19cdaf.js"><link rel="prefetch" href="/assets/js/163.cb127248.js"><link rel="prefetch" href="/assets/js/164.a133957b.js"><link rel="prefetch" href="/assets/js/165.9cbcb225.js"><link rel="prefetch" href="/assets/js/166.ba787af4.js"><link rel="prefetch" href="/assets/js/167.addbc84c.js"><link rel="prefetch" href="/assets/js/168.ec88ab1a.js"><link rel="prefetch" href="/assets/js/17.0cec25c5.js"><link rel="prefetch" href="/assets/js/18.f6060c23.js"><link rel="prefetch" href="/assets/js/19.82dd5e0c.js"><link rel="prefetch" href="/assets/js/20.84737fdf.js"><link rel="prefetch" href="/assets/js/21.c23dac76.js"><link rel="prefetch" href="/assets/js/22.7e5196db.js"><link rel="prefetch" href="/assets/js/23.954f1ee4.js"><link rel="prefetch" href="/assets/js/24.28671f7c.js"><link rel="prefetch" href="/assets/js/25.67a8be99.js"><link rel="prefetch" href="/assets/js/26.dad53131.js"><link rel="prefetch" href="/assets/js/27.4d7388ba.js"><link rel="prefetch" href="/assets/js/28.98238882.js"><link rel="prefetch" href="/assets/js/29.8adce65a.js"><link rel="prefetch" href="/assets/js/3.ec369388.js"><link rel="prefetch" href="/assets/js/30.221e133f.js"><link rel="prefetch" href="/assets/js/31.a008da91.js"><link rel="prefetch" href="/assets/js/32.09ee84e1.js"><link rel="prefetch" href="/assets/js/33.485a20d9.js"><link rel="prefetch" href="/assets/js/34.2a22cb52.js"><link rel="prefetch" href="/assets/js/35.5dbeb360.js"><link rel="prefetch" href="/assets/js/36.8b0814f0.js"><link rel="prefetch" href="/assets/js/37.1859306c.js"><link rel="prefetch" href="/assets/js/38.62f392b7.js"><link rel="prefetch" href="/assets/js/39.285abf16.js"><link rel="prefetch" href="/assets/js/4.d812732b.js"><link rel="prefetch" href="/assets/js/40.af12b8a2.js"><link rel="prefetch" href="/assets/js/41.ba81ff4e.js"><link rel="prefetch" href="/assets/js/42.ff26b37e.js"><link rel="prefetch" href="/assets/js/43.e04e5b27.js"><link rel="prefetch" href="/assets/js/44.4dd69665.js"><link rel="prefetch" href="/assets/js/45.7246ea0f.js"><link rel="prefetch" href="/assets/js/46.0dacb2b7.js"><link rel="prefetch" href="/assets/js/47.be732a8c.js"><link rel="prefetch" href="/assets/js/48.d17af0de.js"><link rel="prefetch" href="/assets/js/49.967801d8.js"><link rel="prefetch" href="/assets/js/5.13ef6d2c.js"><link rel="prefetch" href="/assets/js/50.a5f1f868.js"><link rel="prefetch" href="/assets/js/51.8eaaf245.js"><link rel="prefetch" href="/assets/js/52.7f7f44e9.js"><link rel="prefetch" href="/assets/js/53.59f1ddbc.js"><link rel="prefetch" href="/assets/js/54.794ae8f9.js"><link rel="prefetch" href="/assets/js/55.4cee6aff.js"><link rel="prefetch" href="/assets/js/56.48afdbda.js"><link rel="prefetch" href="/assets/js/57.b64b4a3e.js"><link rel="prefetch" href="/assets/js/58.0bf2449e.js"><link rel="prefetch" href="/assets/js/59.a9f92505.js"><link rel="prefetch" href="/assets/js/6.d077a4f9.js"><link rel="prefetch" href="/assets/js/60.d92230e0.js"><link rel="prefetch" href="/assets/js/61.171cbb48.js"><link rel="prefetch" href="/assets/js/62.86f1a214.js"><link rel="prefetch" href="/assets/js/63.d89795ca.js"><link rel="prefetch" href="/assets/js/64.c5b4a68a.js"><link rel="prefetch" href="/assets/js/65.a406f90a.js"><link rel="prefetch" href="/assets/js/66.c8bcf7ba.js"><link rel="prefetch" href="/assets/js/67.d929202c.js"><link rel="prefetch" href="/assets/js/68.aa110260.js"><link rel="prefetch" href="/assets/js/69.38ff1ff6.js"><link rel="prefetch" href="/assets/js/7.2d058937.js"><link rel="prefetch" href="/assets/js/70.487b2291.js"><link rel="prefetch" href="/assets/js/71.00d41859.js"><link rel="prefetch" href="/assets/js/72.e46681c4.js"><link rel="prefetch" href="/assets/js/74.9c4071f2.js"><link rel="prefetch" href="/assets/js/75.b5614d0e.js"><link rel="prefetch" href="/assets/js/76.cd1f7dbb.js"><link rel="prefetch" href="/assets/js/77.4e61868c.js"><link rel="prefetch" href="/assets/js/78.72e475b4.js"><link rel="prefetch" href="/assets/js/79.db9297bc.js"><link rel="prefetch" href="/assets/js/8.a4f15d2f.js"><link rel="prefetch" href="/assets/js/80.88216544.js"><link rel="prefetch" href="/assets/js/81.1988154a.js"><link rel="prefetch" href="/assets/js/82.c8b6bdff.js"><link rel="prefetch" href="/assets/js/83.365d1972.js"><link rel="prefetch" href="/assets/js/84.29983ff9.js"><link rel="prefetch" href="/assets/js/85.4f3567c9.js"><link rel="prefetch" href="/assets/js/86.88493b03.js"><link rel="prefetch" href="/assets/js/87.d18bb4d6.js"><link rel="prefetch" href="/assets/js/88.c7a0fdba.js"><link rel="prefetch" href="/assets/js/89.4292628d.js"><link rel="prefetch" href="/assets/js/9.d435d2db.js"><link rel="prefetch" href="/assets/js/90.60aebf49.js"><link rel="prefetch" href="/assets/js/91.32a0cd48.js"><link rel="prefetch" href="/assets/js/92.8bed3489.js"><link rel="prefetch" href="/assets/js/93.0610d26d.js"><link rel="prefetch" href="/assets/js/94.4776a036.js"><link rel="prefetch" href="/assets/js/95.ef302e18.js"><link rel="prefetch" href="/assets/js/96.1aff39cf.js"><link rel="prefetch" href="/assets/js/97.0edf171e.js"><link rel="prefetch" href="/assets/js/98.bd4b0373.js"><link rel="prefetch" href="/assets/js/99.7e249e57.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4dbd54c5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">jschen Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="webDesign" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="webDesign" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Babel/" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/TS/" class="nav-link">
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/internet/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/technology/" class="nav-link">
+  技术杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/dataVisualization/" class="nav-link">
+  可视化
+</a></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/React/ReactBase/" class="nav-link router-link-active">
+  React基础
+</a></li><li class="dropdown-subitem"><a href="/React/ReactExtend/" class="nav-link">
+  React扩展
+</a></li><li class="dropdown-subitem"><a href="/React/ReactApi/" class="nav-link">
+  React API
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Vue/VueBase/" class="nav-link">
+  Vue基础
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backend" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="backend" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/node/" class="nav-link">
+  node 基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="machineLearning" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="machineLearning" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/machineLearning/math/" class="nav-link">
+  数学基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interface" class="dropdown-title"><span class="title">面试</span> <span class="arrow down"></span></button> <button type="button" aria-label="interface" class="mobile-dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/interface/webDesignBase/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/interface/interfaceEnd/" class="nav-link">
+  面试经历
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="algorithm" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="algorithm" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/dp/" class="nav-link">
+  DP
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="leetcode" class="dropdown-title"><span class="title">leetcode</span> <span class="arrow down"></span></button> <button type="button" aria-label="leetcode" class="mobile-dropdown-title"><span class="title">leetcode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/leetcode/2021/" class="nav-link">
+  2021
+</a></li><li class="dropdown-item"><!----> <a href="/leetcode/2023/" class="nav-link">
+  2023
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/chenyilong369" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="webDesign" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="webDesign" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Babel/" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JS/" class="nav-link">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/TS/" class="nav-link">
+  TS
+</a></li><li class="dropdown-item"><!----> <a href="/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/internet/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/performance/" class="nav-link">
+  性能
+</a></li><li class="dropdown-item"><!----> <a href="/technology/" class="nav-link">
+  技术杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/dataVisualization/" class="nav-link">
+  可视化
+</a></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/React/ReactBase/" class="nav-link router-link-active">
+  React基础
+</a></li><li class="dropdown-subitem"><a href="/React/ReactExtend/" class="nav-link">
+  React扩展
+</a></li><li class="dropdown-subitem"><a href="/React/ReactApi/" class="nav-link">
+  React API
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Vue/VueBase/" class="nav-link">
+  Vue基础
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="backend" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="backend" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/node/" class="nav-link">
+  node 基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="machineLearning" class="dropdown-title"><span class="title">机器学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="machineLearning" class="mobile-dropdown-title"><span class="title">机器学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/machineLearning/math/" class="nav-link">
+  数学基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interface" class="dropdown-title"><span class="title">面试</span> <span class="arrow down"></span></button> <button type="button" aria-label="interface" class="mobile-dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/interface/webDesignBase/" class="nav-link">
+  前端基础
+</a></li><li class="dropdown-item"><!----> <a href="/interface/interfaceEnd/" class="nav-link">
+  面试经历
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="algorithm" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="algorithm" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/dp/" class="nav-link">
+  DP
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="leetcode" class="dropdown-title"><span class="title">leetcode</span> <span class="arrow down"></span></button> <button type="button" aria-label="leetcode" class="mobile-dropdown-title"><span class="title">leetcode</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/leetcode/2021/" class="nav-link">
+  2021
+</a></li><li class="dropdown-item"><!----> <a href="/leetcode/2023/" class="nav-link">
+  2023
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/chenyilong369" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>React 基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/React/ReactBase/JSX.html" class="sidebar-link">jsx简介</a></li><li><a href="/React/ReactBase/itemRender.html" class="sidebar-link">元素渲染</a></li><li><a href="/React/ReactBase/props.html" class="sidebar-link">组件和 Props</a></li><li><a href="/React/ReactBase/queue.html" class="sidebar-link">生命周期方法</a></li><li><a href="/React/ReactBase/hooks.html" class="sidebar-link">React-Hooks</a></li><li><a href="/React/ReactBase/VirtualDOM.html" class="sidebar-link">虚拟 DOM</a></li><li><a href="/React/ReactBase/stack.html" class="sidebar-link">栈调和</a></li><li><a href="/React/ReactBase/setState.html" class="sidebar-link">setState</a></li><li><a href="/React/ReactBase/Fiber.html" class="sidebar-link">Fiber 架构</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="reactdom-render-串联渲染链路"><a href="#reactdom-render-串联渲染链路" class="header-anchor">#</a> ReactDOM.render 串联渲染链路</h1> <p>首先，我们看一段简单的代码</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">&quot;react-dom&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;App&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>我是标题<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>我是第一段话<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>我是第二段话<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> rootElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> rootElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>我们来看看 ReactDOM.render 的调用栈。</p> <p><code>scheduleUpdateOnFiber</code> 方法的作用是调度更新，在由 ReactDOM.render 发起的首屏渲染这个场景下，它触发的就是 <code>performSyncWorkOnRoot</code>。<code>performSyncWorkOnRoot</code> 开启的是 render 阶段；而 <code>commitRoot</code> 方法开启的则是真实 DOM 的渲染过程（commit 阶段）。</p> <p>大致把 ReactDOM.render 的调用栈划分为三个阶段：</p> <ul><li><p>初始化阶段</p></li> <li><p>render 阶段</p></li> <li><p>commit 阶段</p></li></ul> <h2 id="初始化阶段"><a href="#初始化阶段" class="header-anchor">#</a> 初始化阶段</h2> <p>该阶段主要是为了完成 Fiber 树中基本实体的创建。</p> <p>首先来看看初始化中最关键的函数：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">return</span> <span class="token function">legacyRenderSubtreeIntoContainer</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> element<span class="token punctuation">,</span> container<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>下面是他的部分源代码：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">legacyRenderSubtreeIntoContainer</span><span class="token punctuation">(</span><span class="token parameter">parentComponent<span class="token punctuation">,</span> children<span class="token punctuation">,</span> container<span class="token punctuation">,</span> forceHydrate<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// container 对应的是我们传入的真实 DOM 对象</span>
+  <span class="token keyword">var</span> root <span class="token operator">=</span> container<span class="token punctuation">.</span>_reactRootContainer<span class="token punctuation">;</span>
+  <span class="token comment">// 初始化 fiberRoot 对象</span>
+  <span class="token keyword">var</span> fiberRoot<span class="token punctuation">;</span>
+  <span class="token comment">// DOM 对象本身不存在 _reactRootContainer 属性，因此 root 为空</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 若 root 为空，则初始化 _reactRootContainer，并将其值赋值给 root</span>
+    root <span class="token operator">=</span> container<span class="token punctuation">.</span>_reactRootContainer <span class="token operator">=</span> <span class="token function">legacyCreateRootFromDOMContainer</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span> forceHydrate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// legacyCreateRootFromDOMContainer 创建出的对象会有一个 _internalRoot 属性，将其赋值给 fiberRoot</span>
+    fiberRoot <span class="token operator">=</span> root<span class="token punctuation">.</span>_internalRoot<span class="token punctuation">;</span>
+
+    <span class="token comment">// 这里处理的是 ReactDOM.render 入参中的回调函数，你了解即可</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> callback <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> originalCallback <span class="token operator">=</span> callback<span class="token punctuation">;</span>
+      <span class="token function-variable function">callback</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> instance <span class="token operator">=</span> <span class="token function">getPublicRootInstance</span><span class="token punctuation">(</span>fiberRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">originalCallback</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>instance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token comment">// Initial mount should not be batched.</span>
+    <span class="token comment">// 进入 unbatchedUpdates 方法</span>
+    <span class="token function">unbatchedUpdates</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">updateContainer</span><span class="token punctuation">(</span>children<span class="token punctuation">,</span> fiberRoot<span class="token punctuation">,</span> parentComponent<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// else 逻辑处理的是非首次渲染的情况（即更新），其逻辑除了跳过了初始化工作，与楼上基本一致</span>
+    fiberRoot <span class="token operator">=</span> root<span class="token punctuation">.</span>_internalRoot<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> callback <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> _originalCallback <span class="token operator">=</span> callback<span class="token punctuation">;</span>
+      <span class="token function-variable function">callback</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> instance <span class="token operator">=</span> <span class="token function">getPublicRootInstance</span><span class="token punctuation">(</span>fiberRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">_originalCallback</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>instance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token comment">// Update</span>
+
+    <span class="token function">updateContainer</span><span class="token punctuation">(</span>children<span class="token punctuation">,</span> fiberRoot<span class="token punctuation">,</span> parentComponent<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token function">getPublicRootInstance</span><span class="token punctuation">(</span>fiberRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>可以看到，上面流程中多次出现 fiberRoot 对象，下面大致就是一个 fiberRoot 对象：</p> <p>可以看出，root 对象（container._reactRootContainer）上有一个 _internalRoot 属性，这个 _internalRoot 也就是 fiberRoot。fiberRoot 的本质是一个 FiberRootNode 对象，其中包含一个 current 属性。</p> <p>不难理解，current 对象是一个 FiberNode 实例，同时他还是当前 Fiber 树的头部节点。</p> <p>current 用的最核心的地方在于 fiber 树：</p> <p>fiberRoot 的关联对象是真实 DOM 的容器节点；而 rootFiber 则作为虚拟 DOM 的根节点存在。这两个节点，将是后续整棵 Fiber 树构建的起点。</p> <p>fiberRoot 将和 ReactDOM.render 方法的其他入参一起，被传入 updateContainer 方法，从而形成一个回调。这个回调，正是接下来要调用的 unbatchedUpdates 方法的入参。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">unbatchedUpdates</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 这里是对上下文的处理，不必纠结</span>
+  <span class="token keyword">var</span> prevExecutionContext <span class="token operator">=</span> executionContext<span class="token punctuation">;</span>
+  executionContext <span class="token operator">&amp;=</span> <span class="token operator">~</span>BatchedContext<span class="token punctuation">;</span>
+  executionContext <span class="token operator">|=</span> LegacyUnbatchedContext<span class="token punctuation">;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 重点在这里，直接调用了传入的回调函数 fn，对应当前链路中的 updateContainer 方法</span>
+    <span class="token keyword">return</span> <span class="token function">fn</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+    <span class="token comment">// finally 逻辑里是对回调队列的处理，此处不用太关注</span>
+    executionContext <span class="token operator">=</span> prevExecutionContext<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>executionContext <span class="token operator">===</span> NoContext<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Flush the immediate callbacks that were scheduled during this batch</span>
+      <span class="token function">resetRenderTimer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">flushSyncCallbackQueue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>可以看到它直接调用了传入的回调 fn。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">unbatchedUpdates</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">updateContainer</span><span class="token punctuation">(</span>children<span class="token punctuation">,</span> fiberRoot<span class="token punctuation">,</span> parentComponent<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>下面以部分源代码来展示 updateContainer 函数：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">updateContainer</span><span class="token punctuation">(</span><span class="token parameter">element<span class="token punctuation">,</span> container<span class="token punctuation">,</span> parentComponent<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token operator">...</span>
+
+  <span class="token comment">// 这是一个 event 相关的入参，此处不必关注</span>
+  <span class="token keyword">var</span> eventTime <span class="token operator">=</span> <span class="token function">requestEventTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span><span class="token operator">...</span>
+
+  <span class="token comment">// 这是一个比较关键的入参，lane 表示优先级</span>
+  <span class="token keyword">var</span> lane <span class="token operator">=</span> <span class="token function">requestUpdateLane</span><span class="token punctuation">(</span>current$<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 结合 lane（优先级）信息，创建 update 对象，一个 update 对象意味着一个更新</span>
+  <span class="token keyword">var</span> update <span class="token operator">=</span> <span class="token function">createUpdate</span><span class="token punctuation">(</span>eventTime<span class="token punctuation">,</span> lane<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+  <span class="token comment">// update 的 payload 对应的是一个 React 元素</span>
+  update<span class="token punctuation">.</span>payload <span class="token operator">=</span> <span class="token punctuation">{</span>
+    element<span class="token operator">:</span> element
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 处理 callback，这个 callback 其实就是我们调用 ReactDOM.render 时传入的 callback</span>
+  callback <span class="token operator">=</span> callback <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> callback<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>callback <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> callback <span class="token operator">!==</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'render(...): Expected the last optional `callback` argument to be a '</span> <span class="token operator">+</span> <span class="token string">'function. Instead received: %s.'</span><span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    update<span class="token punctuation">.</span>callback <span class="token operator">=</span> callback<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 将 update 入队</span>
+  <span class="token function">enqueueUpdate</span><span class="token punctuation">(</span>current$<span class="token number">1</span><span class="token punctuation">,</span> update<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 调度 fiberRoot </span>
+  <span class="token function">scheduleUpdateOnFiber</span><span class="token punctuation">(</span>current$<span class="token number">1</span><span class="token punctuation">,</span> lane<span class="token punctuation">,</span> eventTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 返回当前节点（fiberRoot）的优先级</span>
+  <span class="token keyword">return</span> lane<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>它做的最关键的事情可以总结为三件：</p> <ul><li><p>请求当前 Fiber 节点的 lane（优先级）；</p></li> <li><p>结合 lane（优先级），创建当前 Fiber 节点的 update 对象，并将其入队；</p></li> <li><p>调度当前节点（rootFiber）。</p></li></ul> <p>scheduleUpdateOnFiber 函数的任务是调度当前节点的更新。在这个函数中，会处理一系列与优先级、打断操作相关的逻辑。但是在 ReactDOM.render 发起的首次渲染链路中，这些意义都不大，因为这个渲染过程其实是同步的。</p> <p>在首次渲染中，他会直接调用 performSyncWorkOnRoot，这个函数名称表明了它是一个同步函数。</p> <p>performSyncWorkOnRoot 是 render 阶段的起点，render 阶段的任务就是完成 Fiber 树的构建，它是整个渲染链路中最核心的一环。在异步渲染的模式下，render 阶段应该是一个可打断的异步过程。那么为什么 ReactDOM.render 首次渲染是一个同步过程呢？</p> <p>其实在 React 16，包括近期发布的 React 17 小版本中，React 都有以下 3 种启动方式：</p> <ul><li>legacy 模式：</li></ul> <p>ReactDOM.render(&lt;App /&gt;, rootNode)。这是当前 React App 使用的方式，当前没有计划删除本模式，但是这个模式可能不支持这些新功能。</p> <ul><li>blocking 模式：</li></ul> <p>ReactDOM.createBlockingRoot(rootNode).render(&lt;App /&gt;)。目前正在实验中，作为迁移到 concurrent 模式的第一个步骤。</p> <ul><li>concurrent 模式：</li></ul> <p>ReactDOM.createRoot(rootNode).render(&lt;App /&gt;)。目前在实验中，未来稳定之后，打算作为 React 的默认开发模式，这个模式开启了所有的新功能。（异步渲染）</p> <p>我们常用的 ReactDOM.render 对应的是 legacy 模式，它实际触发的仍然是同步的渲染链路。blocking 模式可以理解为 legacy 和 concurrent 之间的一个过渡形态，之所以会有这个模式，是因为 React 官方希望能够提供渐进的迁移策略，帮助我们更加顺滑地过渡到 Concurrent 模式。</p> <h3 id="关于异步模式下的首次渲染链路"><a href="#关于异步模式下的首次渲染链路" class="header-anchor">#</a> 关于异步模式下的首次渲染链路</h3> <p>如果想要开启异步渲染，我们需要调用 ReactDOM.createRoot方法来启动应用。</p> <p>在React 17.0.0 版本中，createRoot 仍然是一个 unstable 的方法。因此实际调用的 API 应该是“unstable_createRoot”：</p> <div class="language-js extra-class"><pre class="language-js"><code>ReactDOM<span class="token punctuation">.</span><span class="token function">unstable_createRoot</span><span class="token punctuation">(</span>rootElement<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>由于在异步渲染模式下，由于请求到的 Lane 不再是 SyncLane（同步优先级），故不会走到 performSyncWorkOnRoot 这个调用，而是会执行 else 中调度相关的逻辑。</p> <p>React 是如何知道当前处于哪个模式的呢？我们可以以 requestUpdateLane 函数为例，下面是它局部的代码：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">requestUpdateLane</span><span class="token punctuation">(</span><span class="token parameter">fiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 获取 mode 属性</span>
+  <span class="token keyword">var</span> mode <span class="token operator">=</span> fiber<span class="token punctuation">.</span>mode<span class="token punctuation">;</span>
+  <span class="token comment">// 结合 mode 属性判断当前的</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>mode <span class="token operator">&amp;</span> BlockingMode<span class="token punctuation">)</span> <span class="token operator">===</span> NoMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> SyncLane<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>mode <span class="token operator">&amp;</span> ConcurrentMode<span class="token punctuation">)</span> <span class="token operator">===</span> NoMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">getCurrentPriorityLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> ImmediatePriority$<span class="token number">1</span> <span class="token operator">?</span> SyncLane <span class="token operator">:</span> SyncBatchedLane<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token operator">...</span><span class="token operator">...</span>
+  <span class="token keyword">return</span> lane<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意 fiber节点上的 mode 属性：React 将会通过修改 mode 属性为不同的值，来标识当前处于哪个渲染模式；在执行过程中，也是通过判断这个属性，来区分不同的渲染模式。</p> <p>mode 属性决定着这个工作流是一气呵成（同步）的，还是分片执行（异步）的。</p> <h2 id="render-阶段"><a href="#render-阶段" class="header-anchor">#</a> render 阶段</h2> <p>performSyncWorkOnRoot 标志着 render 阶段的开始，finishSyncRender 标志着 render 阶段的结束。这中间包含了大量的 beginWork、completeWork 调用栈。</p> <blockquote><p>beginWork、completeWork 这两个方法需要注意，它们串联起的是一个“模拟递归”的过程。</p></blockquote> <p>但在 ReactDOM.render 触发的同步模式下，它仍然是一个深度优先搜索的过程。在这个过程中，beginWork 将创建新的 Fiber 节点，而 completeWork 则负责将 Fiber 节点映射为 DOM 节点。</p> <p>那么我们应该如何便遍历 fiber 树呢？</p> <h3 id="workinprogress-节点的创建"><a href="#workinprogress-节点的创建" class="header-anchor">#</a> workInProgress 节点的创建</h3></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/23/2021, 9:04:54 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8164c333.js" defer></script><script src="/assets/js/2.1e096230.js" defer></script><script src="/assets/js/73.260eb048.js" defer></script>
+  </body>
+</html>
